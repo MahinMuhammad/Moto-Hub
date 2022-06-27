@@ -8,7 +8,8 @@
 	$userType = $_POST['userType'];
 
 	if($userEmail == null || $password == null || $passwordConf == null || $userType == null || $userName == null){
-		echo "no field can be empty or options unchecked";
+		echo '<h1>Empty Field!!!</h1>';
+		echo'<br><a href="reg.html"> Go Back </a>';
 	}else{
 
 		if($password == $passwordConf)
@@ -21,7 +22,8 @@
 		}
 		else
 		{
-			echo "Password confirmation failed!";
+			echo '<h1>Password confirmation failed!!!</h1>';
+			echo'<br><a href="reg.html"> Go Back </a>';
 		}
 
 	}

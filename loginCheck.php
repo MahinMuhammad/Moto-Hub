@@ -1,6 +1,4 @@
 <?php 
-	session_start();
-
 	$userEmail = $_POST['email'];
 	$password = $_POST['password'];
 
@@ -19,11 +17,11 @@
 			if($userEmail == trim($user[0]) && $password == trim($user[1]))
 			{
 
-				$_SESSION['status'] = true;
-				$_SESSION['email'] = trim($user[0]);
-				$_SESSION['name'] = trim($user[2]);
-				$_SESSION['userType'] = trim($user[3]);
-				setcookie('status', 'true', time()+3600, '/');
+				// $_SESSION['status'] = true;
+				// $_SESSION['email'] = trim($user[0]);
+				// $_SESSION['name'] = trim($user[2]);
+				// $_SESSION['userType'] = trim($user[3]);
+				setcookie('status', $data, time()+3600, '/');
 				
 				switch (trim($user[3])) 
 				{

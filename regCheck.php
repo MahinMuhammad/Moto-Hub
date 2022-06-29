@@ -1,6 +1,4 @@
 <?php 
-	session_start();
-
 	$userEmail = $_POST['email'];
 	$password = $_POST['password'];
 	$passwordConf = $_POST['passwordConf'];
@@ -27,6 +25,4 @@
 		}
 
 	}
-
-
 ?>

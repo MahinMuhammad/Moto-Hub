@@ -12,7 +12,7 @@
 	if($password == null || $passwordNew == null || $passwordConf == null)
 	{
 		echo '<h1>Empty Field!!!</h1>';
-		echo'<br><a href="changePass.html"> Go Back </a>';
+		echo'<br><a href="changePass.php"> Go Back </a>';
 	}
 	else
 	{
@@ -32,13 +32,13 @@
 			else
 			{
 				echo '<h1>Password Confirmation Failed!!!</h1>';
-				echo'<br><a href="changePass.html"> Go Back </a>';
+				echo'<br><a href="changePass.php"> Go Back </a>';
 			}
 		}
 		else
 		{
 			echo '<h1>Wrong Current Password!!!</h1>';
-			echo'<br><a href="changePass.html"> Go Back </a>';
+			echo'<br><a href="changePass.php"> Go Back </a>';
 		}
 	}
 

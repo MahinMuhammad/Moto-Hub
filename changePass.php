@@ -1,3 +1,11 @@
+<?php 
+
+	if(!isset($_COOKIE['status']))
+	{
+		header('location: login.html');
+	}
+	$user = explode('|', $_COOKIE['status']); 
+?>
 <html>
 	<head>
 		<title>username</title>

@@ -32,7 +32,6 @@
                     <td><a href="customerHome.php"> BUY </a></td>
                 </tr>
             </table>
-            	<a href="customerHome.php"> GO HOME </a>
         </fieldset>
     </body>
 </html>

@@ -6,7 +6,7 @@
 	}
 	$user = explode('|', $_COOKIE['status']); 
 
-	$file = fopen('product.txt', 'r');
+	$file = fopen('../model/product.txt', 'r');
 	$data=fgets($file);
 	$product = explode('|', $data);
 	setcookie('product', $data, time()+3600, '/');
@@ -18,7 +18,7 @@
 	<style>
 		body 
 		{
-		  background-image: url('backG.jpg');
+		  background-image: url('../asset/backG.jpg');
 		  background-size: cover;
 		}
 	</style>
@@ -32,7 +32,7 @@
 					<td align="center" width="200"><a href="services.php"> Services </a></td> 			
 					<td align="center" width="200"><a href="changePass.php"> Change Password </a></td>
 					<td align="center" width="200"><a href="cart.php"> Cart </a></td>
-					<td align="center" width="200"><a href="logout.php"> Logout </a></td>
+					<td align="center" width="200"><a href="../control/logout.php"> Logout </a></td>
 					<td width="250"></td>
 				</tr>
 			</table>

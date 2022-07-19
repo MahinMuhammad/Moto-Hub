@@ -13,12 +13,12 @@
 	<style>
 		body 
 		{
-		  background-image: url('backG.jpg');
+		  background-image: url('../asset/backG.jpg');
 		  background-size: cover;
 		}
 	</style>
 	<body>
-		<form method="post" action="changePassCheck.php" enctype="">
+		<form method="post" action="../control/changePassCheck.php" enctype="">
 			<fieldset align="center">
 				<legend>CHANGE PASSWORD</legend>
 				<table align="center">

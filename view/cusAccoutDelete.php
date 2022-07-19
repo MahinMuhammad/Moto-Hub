@@ -13,12 +13,12 @@
 	<style>
         body 
         {
-          background-image: url('backG.jpg');
+          background-image: url('../asset/backG.jpg');
           background-size: cover;
         }
     </style>
 	<body>
-		<form method="post" action="cusAccoutDeleteCheck.php" enctype="">
+		<form method="post" action="../control/cusAccoutDeleteCheck.php" enctype="">
 			<fieldset align="center">
 				<table align="center">
 					<tr>

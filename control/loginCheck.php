@@ -1,15 +1,19 @@
 <?php 
+	if(!isset($_COOKIE['status']))
+	{
+		header('location: ../view/login.html');
+	}
 	$userEmail = $_POST['email'];
 	$password = $_POST['password'];
 
 	if($userEmail == null || $password == null)
 	{
 		echo '<h1>Email or Password Empty!!!</h1>';
-		echo'<br><a href="login.html"> Go Back </a>';
+		echo'<br><a href="../view/login.html"> Go Back </a>';
 	}
 	else
 	{
-		$file = fopen('user.txt', 'r');
+		$file = fopen('../model/user.txt', 'r');
 		
 		while (!feof($file)) {
 			$data=fgets($file);
@@ -26,19 +30,19 @@
 				switch (trim($user[3])) 
 				{
 					case "Customer":
-						header('location: customerHome.php');
+						header('location: ../view/customerHome.php');
 						break;
 
 					case "Seller":
-						header('location: sellerHome.php');
+						header('location: ../view/sellerHome.php');
 						break;
 
 					case "Service-Man":
-						header('location: serviceManHome.php');
+						header('location: ../view/serviceManHome.php');
 						break;
 
 					case "Admin":
-						header('location: adminHome.php');
+						header('location: ../view/adminHome.php');
 						break;
 					
 					default:
@@ -48,7 +52,7 @@
 			}
 		}
 		echo '<h1>Invalid user!!!</h1>';
-		echo'<br><a href="login.html"> Go Back </a>';		
+		echo'<br><a href="../view/login.html"> Go Back </a>';		
 	}
 
 ?>

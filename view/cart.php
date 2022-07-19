@@ -18,7 +18,7 @@
     <style>
         body 
         {
-          background-image: url('backG.jpg');
+          background-image: url('../asset/backG.jpg');
           background-size: cover;
         }
     </style>
@@ -32,6 +32,7 @@
                     <td><a href="customerHome.php"> BUY </a></td>
                 </tr>
             </table>
+            	<a href="customerHome.php"> GO HOME </a>
         </fieldset>
     </body>
 </html>

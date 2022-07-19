@@ -13,12 +13,12 @@
 	<style>
 		body 
 		{
-		  background-image: url('backG.jpg');
+		  background-image: url('../asset/backG.jpg');
 		  background-size: cover;
 		}
 	</style>
 	<body>
-		<form method="post" action="profileCusEdit.php" enctype="">
+		<form method="post" action="../control/profileCusEdit.php" enctype="">
 			<fieldset align="center">
 				<legend>SETTINGS</legend>
 				<table align="center">

@@ -16,7 +16,7 @@
 	<style>
 		body 
 		{
-		  background-image: url('backG.jpg');
+		  background-image: url('../asset/backG.jpg');
 		  background-size: cover;
 		}
 	</style>

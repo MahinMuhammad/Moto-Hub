@@ -4,11 +4,11 @@
 	{
 		header('location: login.html');
 	}
-	$user = explode('|', $_COOKIE['status']); 
 ?>
 <html>
 	<head>
 		<title>username</title>
+		<script src="../asset/cusCngPassVal.js"></script>
 	</head>
 	<style>
 		body 
@@ -18,21 +18,21 @@
 		}
 	</style>
 	<body>
-		<form method="post" action="../control/changePassCheck.php" enctype="">
+		<form method="post" action="../control/cusChangePassCheck.php" onsubmit="return notEmpty();">
 			<fieldset align="center">
 				<legend>CHANGE PASSWORD</legend>
 				<table align="center">
 					<tr>
 						<td>Current Password</td>
-						<td><input type="password" name="password" value=""><br></td>
+						<td><input type="password" id="password" name="password" value=""><br></td>
 					</tr>
 					<tr>
 						<td>New Password</td>
-						<td><input type="password" name="passwordNew" value=""><br></td>
+						<td><input type="password" id="passwordNew" name="passwordNew" value=""><br></td>
 					</tr>
 					<tr>
 						<td>Confirm Password</td>
-						<td><input type="password" name="passwordConf" value=""><br></td>
+						<td><input type="password" id="passwordConf" name="passwordConf" value=""><br></td>
 					</tr>
 					<tr>
 						<td></td>

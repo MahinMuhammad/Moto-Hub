@@ -1,8 +1,4 @@
 <?php 
-	if(!isset($_COOKIE['status']))
-	{
-		header('location: ../view/login.html');
-	}
 	$userEmail = $_POST['email'];
 	$password = $_POST['password'];
 	$passwordConf = $_POST['passwordConf'];
@@ -22,7 +18,7 @@
 			$user['email'] = $userEmail;
 			$user['pass'] = $password;
 			$user['userType'] = $userType;
-			if(regFun($user))
+			if(reg($user))
 			{
 				header('location: ../view/login.html');
 			}

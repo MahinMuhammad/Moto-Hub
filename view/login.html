@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title>username</title>
+		<script src="../asset/loginVal.js"></script>
 	</head>
 	<style>
 		body 
@@ -10,17 +11,17 @@
 		}
 	</style>
 	<body>
-		<form method="post" action="../control/loginCheck.php" enctype="">
+		<form method="post" action="../control/loginCheck.php" onsubmit="return notEmpty();">
 			<fieldset align="center">
 				<legend>LOGIN</legend>
 				<table align="center">
 					<tr>
 						<td>Email</td>
-						<td><input type="email" name="email" value=""><br></td>
+						<td><input type="email" id="email" name="email" value=""><br></td>
 					</tr>
 					<tr>
 						<td>Password</td>
-						<td><input type="password" name="password" value=""><br></td>
+						<td><input type="password" id="password" name="password" value=""><br></td>
 					</tr>
 					<tr>
 						<td></td>

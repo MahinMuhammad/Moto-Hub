@@ -4,11 +4,14 @@
 	{
 		header('location: login.html');
 	}
-	$user = explode('|', $_COOKIE['status']); 
+	$user['email'] = $_COOKIE['status']; 
+	require_once "../model/userModel.php";
+
 ?>
 <html>
 	<head>
 		<title></title>
+		<script src="../asset/cusSetVal.js"></script>
 	</head>
 	<style>
 		body 
@@ -18,24 +21,24 @@
 		}
 	</style>
 	<body>
-		<form method="post" action="../control/profileCusEdit.php" enctype="">
+		<form method="post" action="../control/cusSettingsCheck.php" onsubmit="return notEmpty();">
 			<fieldset align="center">
 				<legend>SETTINGS</legend>
 				<table align="center">
 					<tr>
 						<td>Name</td>
-						<td><input type="text" name="name" value="<?php echo trim($user[2]); ?>"><br></td>
+						<td><input type="text" id="name" name="name" value="<?php echo getRow($user)['Name']; ?>"><br></td>
 					</tr>
 
 					<tr>
 						<td>Email</td>
-						<td><input type="email" name="email" value="<?php echo trim($user[0]); ?>"><br></td>
+						<td><input type="email" id="email" name="email" value="<?php echo getRow($user)['Email']; ?>"><br></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td>
 							<input type="submit" name="submit" value="Save">
-							<a href="profileCus.php"> GO BACK </a> 
+							<a href="cusProfile.php"> GO BACK </a> 
 						</td>
 					</tr>
 				</table>

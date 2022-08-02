@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title>Signup</title>
+		<script src="../asset/regVal.js"></script>
 	</head>
 	<style>
 		body 
@@ -10,28 +11,28 @@
 		}
 	</style>
 	<body>
-		<form method="post" action="../control/regCheck.php" enctype="">
+		<form method="post" action="../control/regCheck.php" onsubmit="return notEmpty();">
 			<fieldset align="center">
 				<legend>REGISTRATION</legend>
 				<table align="center">
 					<tr>
 						<td>Name</td>
-						<td><input type="text" name="name" value=""><br></td>
+						<td><input type="text" id="name" name="name" value=""><br></td>
 					</tr>
 
 					<tr>
 						<td>Email</td>
-						<td><input type="email" name="email" value=""><br></td>
+						<td><input type="email" id="email" name="email" value=""><br></td>
 					</tr>
 
 					<tr>
 						<td>Password</td>
-						<td><input type="password" name="password" value=""><br></td>
+						<td><input type="password" id="password" name="password" value=""><br></td>
 					</tr>
 
 					<tr>
 						<td>Confirm Password</td>
-						<td><input type="password" name="passwordConf" value=""><br></td>
+						<td><input type="password" id="passwordConf" name="passwordConf" value=""><br></td>
 					</tr>
 
 					<tr>

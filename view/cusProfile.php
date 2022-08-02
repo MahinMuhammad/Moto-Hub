@@ -3,7 +3,8 @@
     {
         header('location: login.html');
     }
-    $user = explode('|', $_COOKIE['status']);
+    $user['email'] = $_COOKIE['status'];
+    require_once "../model/userModel.php";
  ?>
  <html>
      <head>
@@ -26,18 +27,18 @@
                     <table align="center" width="50%">
                         <tr>
                             <td>NAME</td>
-                            <td><?php echo trim($user[2]); ?></td>
+                            <td><?php echo getRow($user)['Name']; ?></td>
                         </tr>
                         <tr>
                             <td>EMAIL</td>
-                            <td><?php echo trim($user[0]); ?></td>
+                            <td><?php echo getRow($user)['Email']; ?></td>
                         </tr>
                         <tr>
                             <td>USER TYPE</td>
-                            <td><?php echo trim($user[3]); ?></td>
+                            <td><?php echo getRow($user)['UserType']; ?></td>
                         </tr>
                         <tr>
-                            <td><a href="profileCusSet.php"> SETTINGS </a></td>
+                            <td><a href="cusSettings.php"> SETTINGS </a></td>
                             <td><a href="customerHome.php"> GO HOME </a></td>
                         </tr>
                     </table>

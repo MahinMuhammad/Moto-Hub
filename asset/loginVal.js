@@ -21,16 +21,28 @@ function login()
 	let xhttp = new XMLHttpRequest();
 	xhttp.open('POST', '../control/loginCheck.php', true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xhttp.send('email='+email, 'password='+pass);
+	xhttp.send('email='+email+'&password='+pass);
 	xhttp.onreadystatechange = function ()
 	{
-
-        if(this.readyState == 4 && this.status == 200){
-            //alert(this.responseText);
-            this.return;
+        if(this.readyState == 4 && this.status == 200)
+        {
+            if(this.responseText.trim() == "Invalid")
+            {
+            	alert("Invalid user!!");
+            }
+            else if(this.responseText.trim() == "Wrong")
+            {
+            	alert("User type not found!!");
+            }
+            else
+            {
+            	window.location.href = this.responseText.trim();
+            }
         }
     } 
 }
+
+
 
 
 

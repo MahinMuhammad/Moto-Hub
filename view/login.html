@@ -11,7 +11,7 @@
 		}
 	</style>
 	<body>
-		<form method="post" action="../control/loginCheck.php" onsubmit="return notEmpty();">
+		<form method="post" action="">
 			<fieldset align="center">
 				<legend>LOGIN</legend>
 				<table align="center">
@@ -26,7 +26,7 @@
 					<tr>
 						<td></td>
 						<td>
-							<input type="submit" name="submit" value="Login">
+							<input type="submit" name="submit" value="Login" onclick="return !!(notEmpty() && login());">
 							<a href="reg.html"> Register </a>
 						</td>
 					</tr>

@@ -11,29 +11,28 @@
 		switch (getRow($user)['UserType']) 
 		{
 			case "Customer":
-				header('location: ../view/customerHome.php');
+				echo '../view/customerHome.php';
 				break;
 
 			case "Seller":
-				header('location: ../view/sellerHome.php');
+				echo '../view/sellerHome.php';
 				break;
 
 			case "Service-Man":
-				header('location: ../view/serviceManHome.php');
+				echo '../view/serviceManHome.php';
 				break;
 
 			case "Admin":
-				header('location: ../view/adminHome.php');
+				echo '../view/adminHome.php';
 				break;
 			
 			default:
-				echo "user type not found!";
+				echo "Wrong";
 				break;
 		}
 	}
 	else
 	{
-		echo '<h1>Invalid user!!!</h1>';
-		echo'<br><a href="../view/login.html"> Go Back </a>';
+		echo "Invalid";
 	}
 ?>

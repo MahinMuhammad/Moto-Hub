@@ -21,7 +21,7 @@
 		}
 	</style>
 	<body>
-		<form method="post" action="../control/cusSettingsCheck.php" onsubmit="return notEmpty();">
+		<form method="post" action="">
 			<fieldset align="center">
 				<legend>SETTINGS</legend>
 				<table align="center">
@@ -37,7 +37,7 @@
 					<tr>
 						<td></td>
 						<td>
-							<input type="submit" name="submit" value="Save">
+							<input type="submit" name="submit" value="Save" onclick="return !!(notEmpty() && changeInfo());">
 							<a href="cusProfile.php"> GO BACK </a> 
 						</td>
 					</tr>

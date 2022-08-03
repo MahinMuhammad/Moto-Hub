@@ -11,7 +11,7 @@
 		}
 	</style>
 	<body>
-		<form method="post" action="../control/regCheck.php" onsubmit="return notEmpty();">
+		<form method="post" action="">
 			<fieldset align="center">
 				<legend>REGISTRATION</legend>
 				<table align="center">
@@ -38,7 +38,7 @@
 					<tr>
 						<td>User Type</td>
 						<td>
-							<select name="userType">
+							<select name="userType" id="userType">
 								<option value="Customer">Customer</option>
 								<option value="Seller">Seller</option>
 								<option value="Service-Man">Service-Man</option>							
@@ -49,7 +49,7 @@
 					<tr>
 						<td></td>
 						<td>
-							<input type="submit" name="submit" value="Register">
+							<input type="submit" name="submit" value="Register" onclick="return !!(notEmpty() && reg());">
 							<a href="login.html"> Login </a> 
 						</td>
 					</tr>

@@ -23,3 +23,30 @@ function notEmpty()
 		}
 	}
 }
+
+function reg()
+{
+	let name = document.getElementById('name').value;
+	let email = document.getElementById('email').value;
+	let pass = document.getElementById('password').value;
+	let userType = document.getElementById('userType').value;
+
+	let xhttp = new XMLHttpRequest();
+	xhttp.open('POST', '../control/regCheck.php', true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send('email='+email+'&password='+pass+'&name='+name+'&userType='+userType);
+	xhttp.onreadystatechange = function ()
+	{
+		if(this.readyState == 4 && this.status == 200)
+		{
+			if(this.responseText.trim() == "Failed")
+			{
+				alert('Database Error');
+			}
+			else
+			{
+				window.location.href = this.responseText.trim();
+			}
+		}
+	}
+}

@@ -23,7 +23,7 @@
 				break;
 
 			case "Admin":
-				echo '../view/adminHome.php';
+				echo '../view/AdminDash.php';
 				break;
 			
 			default:

@@ -14,43 +14,75 @@
 		<form method="post" action="">
 			<fieldset align="center">
 				<legend>REGISTRATION</legend>
-				<table align="center">
+				<table align="center" border="2">
 					<tr>
-						<td>Name</td>
-						<td><input type="text" id="name" name="name" value=""><br></td>
-					</tr>
-
-					<tr>
-						<td>Email</td>
-						<td><input type="email" id="email" name="email" value=""><br></td>
-					</tr>
-
-					<tr>
-						<td>Password</td>
-						<td><input type="password" id="password" name="password" value=""><br></td>
-					</tr>
-
-					<tr>
-						<td>Confirm Password</td>
-						<td><input type="password" id="passwordConf" name="passwordConf" value=""><br></td>
-					</tr>
-
-					<tr>
-						<td>User Type</td>
 						<td>
-							<select name="userType" id="userType">
-								<option value="Customer">Customer</option>
-								<option value="Seller">Seller</option>
-								<option value="Service-Man">Service-Man</option>							
-							</select>
-						</td>
-					</tr>
+							<table align="center">
+								<tr>
+									<td>Name</td>
+									<td><input type="text" id="name" name="name" value=""><br></td>
+								</tr>
 
-					<tr>
-						<td></td>
-						<td>
-							<input type="submit" name="submit" value="Register" onclick="return !!(notEmpty() && reg());">
-							<a href="login.html"> Login </a> 
+								<tr>
+									<td>Email</td>
+									<td><input type="email" id="email" name="email" value=""><br></td>
+								</tr>
+
+								<tr>
+									<td>Password</td>
+									<td><input type="password" id="password" name="password" value=""><br></td>
+								</tr>
+
+								<tr>
+									<td>Confirm Password</td>
+									<td><input type="password" id="passwordConf" name="passwordConf" value=""><br></td>
+								</tr>
+
+								<tr>
+									<td>Phone Number</td>
+									<td><input type="text" id="phone" name="phone" value=""><br></td>
+								</tr>
+
+								<tr>
+									<td>Date of Birth</td>
+									<td><input type="date" id="dob" name="dob" value=""><br></td>
+								</tr>
+
+								<tr>
+									<td>Gender</td>
+									<td>
+										<select name="gender" id="gender">
+											<option value="Male">Male</option>
+											<option value="Female">Female</option>
+											<option value="Other">Other</option>							
+										</select>
+									</td>
+								</tr>
+
+								<tr>
+									<td>Address</td>
+									<td><input type="text" id="address" name="address" value=""><br></td>
+								</tr>
+
+								<tr>
+									<td>User Type</td>
+									<td>
+										<select name="userType" id="userType">
+											<option value="Customer">Customer</option>
+											<option value="Seller">Seller</option>
+											<option value="Service-Man">Service-Man</option>							
+										</select>
+									</td>
+								</tr>
+
+								<tr>
+									<td></td>
+									<td>
+										<input type="submit" name="submit" value="Register" onclick="return !!(notEmpty() && uniqueEmail());">
+										<a href="login.html"> Login </a> 
+									</td>
+								</tr>
+							</table>
 						</td>
 					</tr>
 				</table>			 			 			 			 

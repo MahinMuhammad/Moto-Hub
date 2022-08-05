@@ -37,7 +37,7 @@
 					<tr>
 						<td></td>
 						<td>
-							<input type="submit" name="submit" value="Save" onclick="return !!(notEmpty() && changeInfo());">
+							<input type="submit" name="submit" value="Save" onclick="return !!(notEmpty() && uniqueEmail());">
 							<a href="cusProfile.php"> GO BACK </a> 
 						</td>
 					</tr>

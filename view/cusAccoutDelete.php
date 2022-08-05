@@ -18,7 +18,7 @@
         }
     </style>
 	<body>
-		<form method="post" action="../control/cusAccoutDeleteCheck.php" onsubmit="return notEmpty();">
+		<form method="post" action="">
 			<fieldset align="center">
 				<table align="center">
 					<tr>
@@ -28,7 +28,7 @@
 					<tr>
 						<td></td>
 						<td>
-							<input type="submit" name="submit" value="Delete">
+							<input type="submit" name="submit" value="Delete" onclick="return !!(notEmpty() && delAcc());">
 							<a href="cusSettings.php"> ABORT </a> 
 						</td>
 					</tr>

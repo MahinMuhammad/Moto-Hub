@@ -17,7 +17,7 @@
 
     function reg($user){
         $conn = getConnection();
-		$sql = "insert into userTab values('{$user['username']}', '{$user['email']}', '{$user['pass']}', '{$user['userType']}')";
+		$sql = "insert into userTab values('{$user['username']}', '{$user['email']}', '{$user['pass']}', '{$user['userType']}', '{$user['dob']}', '{$user['gender']}', '{$user['address']}', '{$user['phone']}')";
         if(mysqli_query($conn, $sql)){
             return true;
         }else{
@@ -69,6 +69,21 @@
         }
     }
 
+    function uniqueEmail($user)
+    {
+        $conn = getConnection();
+        $sql = "select * from userTab where Email='{$user['email']}'";
+        $result = mysqli_query($conn, $sql);
+        $count = mysqli_num_rows($result);
+
+        if($count >0)
+        {
+            return false;
+        }else
+        {
+            return true;
+        }
+    }
 ?>
 
 

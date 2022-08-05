@@ -18,7 +18,7 @@
 		}
 	</style>
 	<body>
-		<form method="post" action="../control/cusChangePassCheck.php" onsubmit="return notEmpty();">
+		<form method="post" action="">
 			<fieldset align="center">
 				<legend>CHANGE PASSWORD</legend>
 				<table align="center">
@@ -37,7 +37,7 @@
 					<tr>
 						<td></td>
 						<td>
-							<input type="submit" name="submit" value="Confirm">
+							<input type="submit" name="submit" value="Confirm" onclick="return !!(notEmpty() && cngPass());">
 							<a href="customerHome.php"> Go Back </a>
 						</td>
 					</tr>

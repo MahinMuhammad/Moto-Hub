@@ -9,23 +9,14 @@
 
     require_once "../model/userModel.php";
 
-    if($user['pass'] == null)
+    if(deleteUser($user))
     {
-        echo '<h1>Empty Field!!!</h1>';
-        echo'<br><a href="../view/cusAccoutDelete.php"> Go Back </a>';
+        setcookie('status', 'delete', time()-100, '/');
+        echo '../view/login.html';
     }
     else
     {
-        if(deleteUser($user))
-        {
-            setcookie('status', $newLine, time()-100, '/');
-            header('location: ../view/login.html');
-        }
-        else
-        {
-            echo '<h1>Wrong Password!!!</h1>';
-            echo'<br><a href="../view/cusAccoutDelete.php"> Go Back </a>';
-        }
+        echo 'WRONGPASS';
     }
  ?>
 

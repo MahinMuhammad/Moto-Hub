@@ -14,7 +14,6 @@
 	if(updateRow($user))
 	{
 		setcookie('status', $user['emailNew'], time()+3600, '/');
-		echo '../view/customerHome.php';
 	}
 	else
 	{

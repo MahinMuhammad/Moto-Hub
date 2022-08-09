@@ -1,4 +1,4 @@
-function notEmpty()
+function notSetEmpty()
 {
 	let name = document.getElementById('name').value;
 	let email = document.getElementById('email').value;
@@ -33,7 +33,7 @@ function changeInfo()
 			}
 			else
 			{
-				window.location.href = this.responseText.trim();
+				alert('Information Updated!');
 			}
 		}
 	}
@@ -63,6 +63,26 @@ function uniqueEmail()
 		}
 	}
 }
+
+function loadSettings()
+{
+	document.getElementById("fields1").style.width = 544+"px";
+	fetch("../view/cusSettings.php")
+	.then((result) => { return result.text(); })
+	.then((content) => { document.getElementById("box1").innerHTML = content; });
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

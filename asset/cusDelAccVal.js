@@ -35,3 +35,15 @@ function delAcc()
 		}
 	}
 }
+
+function loadAccDel()
+{
+	fetch("../view/cusAccoutDelete.php")
+	.then((result) => { return result.text(); })
+	.then((content) => { document.getElementById("box1").innerHTML = content; });
+}
+
+
+
+
+

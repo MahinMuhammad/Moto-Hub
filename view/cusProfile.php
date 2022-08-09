@@ -5,45 +5,105 @@
     }
     $user['email'] = $_COOKIE['status'];
     require_once "../model/userModel.php";
- ?>
- <html>
-     <head>
-        <title></title>
-     </head>
-        <style>
-        body 
-        {
-          background-image: url('../asset/backG.jpg');
-          background-size: cover;
-        }
-    </style>
-     <body>
-        <table border="1" align="center" width="40%">
-            <tr>
-                <td align="center">PROFILE</td>
-            </tr>
-            <tr>
-                <td>
-                    <table align="center" width="50%">
-                        <tr>
-                            <td>NAME</td>
-                            <td><?php echo getRow($user)['Name']; ?></td>
-                        </tr>
-                        <tr>
-                            <td>EMAIL</td>
-                            <td><?php echo getRow($user)['Email']; ?></td>
-                        </tr>
-                        <tr>
-                            <td>USER TYPE</td>
-                            <td><?php echo getRow($user)['UserType']; ?></td>
-                        </tr>
-                        <tr>
-                            <td><a href="cusSettings.php"> SETTINGS </a></td>
-                            <td><a href="customerHome.php"> GO HOME </a></td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-     </body>
- </html>
+?>
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="../asset/sideBar.css">
+    <link rel="stylesheet" href="../asset/cusProfileDes.css">
+    <script src="../asset/cusProf.js"></script>
+    <script src="../asset/cusSetVal.js"></script>
+    <script src="../asset/cusCngPassVal.js"></script>
+    <script src="../asset/cusDelAccVal.js"></script>
+</head>
+
+    <body>
+        <font face="Verdana">
+            <aside>
+                <p> Nevigation </p>
+                
+                <a href="javascript:void(0)" onclick="cleanBox(); loadSettings(); editWindowOpen();">
+                  Edit
+                </a>
+                <a href="javascript:void(0)" onclick="cleanBox(); loadCngPass(); editWindowOpen();">
+                  Change Pass
+                </a>
+                <a href="javascript:void(0)" onclick="cleanBox(); loadAccDel(); editWindowOpen();">
+                  Detele Id
+                </a>
+                <a href="customerHome.php">
+                  Go Home
+                </a>
+              </aside>
+              <div id="prof">
+                  <div id="title1">
+                      PROFILE
+                  </div>
+                  <hr>
+                  <div id="propic">
+                      
+                  </div>
+                  <div id="divider1"></div>
+                  <div id="info1">
+                      <div class="info1Col">
+                          <div>
+                              NAME 
+                          </div>
+                          <div class="colinfo">
+                              GENDER 
+                          </div>
+                          <div class="colinfo">
+                              DOB 
+                          </div>
+                          <div class="colinfo">
+                              TYPE 
+                          </div>
+                      </div>
+                      <div class="reslt1Col">
+                          <div>
+                              <?php echo getRow($user)['Name']; ?>
+                          </div>
+                          <div class="colinfo">
+                              <?php echo getRow($user)['Gender']; ?>
+                          </div>
+                          <div class="colinfo">
+                              <?php echo getRow($user)['DOB']; ?>
+                          </div>
+                          <div class="colinfo">
+                              <?php echo getRow($user)['UserType']; ?>
+                          </div>
+                      </div>
+                  </div>
+                  <div id="info2">
+                      <div class="info1Col">
+                          <div class="colinfo">
+                              EMAIL 
+                          </div>
+                          <div class="colinfo">
+                              PHONE 
+                          </div>
+                          <div class="colinfo">
+                              ADD 
+                          </div>
+                      </div>
+                      <div class="reslt1Col">
+                            <div class="colinfo">
+                              <?php echo getRow($user)['Email']; ?>
+                          </div>
+                          <div class="colinfo">
+                              <?php echo getRow($user)['Phone']; ?>
+                          </div>
+                          <div class="colinfo">
+                              <?php echo getRow($user)['Address']; ?>
+                          </div>
+                      </div>
+                  </div>
+                  <hr>
+                  <div id="fields1">
+                    <div id="close1" onclick="editWindowClose()">X</div>
+                    <div id="box1"></div>
+                  </div>
+              </div>
+        </font>
+    </body>
+

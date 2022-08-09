@@ -1,0 +1,158 @@
+aside,
+#prof {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#prof{
+  /*background-color: green;*/
+  width: 1160px;
+  height: 100vh;
+}
+
+#title1{
+  margin-top: 50px;
+  margin-left: 440px;
+  padding-top: 9px;
+  padding-left: 32px;
+  width: 150px;
+  height: 40px;
+  box-sizing: border-box;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  /*background-image: linear-gradient(30deg, #F4A4A4, #6474E5);*/
+  background-color: #778ff3;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  font-size: large;
+  box-shadow: 9px 9px 15px #cbced1, -9px -9px 15px white;
+}
+
+#propic{
+  background-color: gray;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+#propic, #divider1{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#divider1{
+  background-color: gray;
+  margin-left: 20px;
+  width: 1px;
+  height: 100px;
+}
+
+#divider1, #info1{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#info1{
+  background-color: #e7effc;
+  width: 300px;
+  height: 150px;
+  margin-left: 20px;
+  box-shadow: 14px 14px 20px #cbced1;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+#info1, #info2{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#info2{
+  background-color: #e7effc;
+  margin-left: 5px;
+  width: 300px;
+  height: 150px;
+  box-shadow: 14px 14px 20px #cbced1;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.info1Col, .reslt1Col{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.info1Col{
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 30%;
+}
+
+.reslt1Col{
+  margin-top: 15px;
+  width: 60%;
+}
+
+.colinfo{
+  margin-top: 5px;
+}
+
+#prof,
+#fields1 {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+#fields1{
+  position: fixed;
+  margin-left: 300px;
+  margin-top: 470px;
+  width: 300px;
+  height: 355px;
+  border-radius: 20px;
+  padding: 15px;
+  box-sizing: border-box;
+  background: #e7effc;
+  box-shadow: 14px 14px 20px #cbced1;
+}
+
+#box1, #close1{
+  display: inline-block;
+  vertical-align: top;
+}
+
+#close1{
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #778ff3;
+  color: white;
+  padding-left: 7px;
+  padding-top: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 4px #cbced1, -4px -4px 4px white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

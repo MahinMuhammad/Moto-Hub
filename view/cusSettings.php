@@ -12,39 +12,30 @@
 	<head>
 		<title></title>
 		<script src="../asset/cusSetVal.js"></script>
+		<link rel="stylesheet" type="text/css" href="../asset/cusSetDes.css">
 	</head>
-	<style>
-		body 
-		{
-		  background-image: url('../asset/backG.jpg');
-		  background-size: cover;
-		}
-	</style>
-	<body>
+	<body id="settings1">
 		<form method="post" action="">
-			<fieldset align="center">
-				<legend>SETTINGS</legend>
-				<table align="center">
-					<tr>
-						<td>Name</td>
-						<td><input type="text" id="name" name="name" value="<?php echo getRow($user)['Name']; ?>"><br></td>
-					</tr>
-
-					<tr>
-						<td>Email</td>
-						<td><input type="email" id="email" name="email" value="<?php echo getRow($user)['Email']; ?>"><br></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>
-							<input type="submit" name="submit" value="Save" onclick="return !!(notEmpty() && uniqueEmail());">
-							<a href="cusProfile.php"> GO BACK </a> 
-						</td>
-					</tr>
-				</table>
-				_______________________________________<br>
-				<a href="cusAccoutDelete.php"> DELETE ACCOUNT! </a> 
-			</fieldset>
+			<div id="setTitle1">EDIT</div>
+				<div align="center" class="inputInfo">
+					<label class="inputLab1">Name</label>
+					<input type="text" id="name" name="name" value="<?php echo getRow($user)['Name']; ?>">
+					<label class="inputLab1">Gender</label>
+					<input type="text" id="gender" name="gender" value="<?php echo getRow($user)['Gender']; ?>">
+					<label class="inputLab1">DOB</label>
+					<input type="date" id="dob" name="dob" value="<?php echo getRow($user)['DOB']; ?>">
+				</div>
+				<div align="center" class="inputInfo2">
+					<label class="inputLab1">Email</label>
+					<input type="email" id="email" name="email" value="<?php echo getRow($user)['Email']; ?>">
+					<label class="inputLab1">Phone</label>
+					<input type="text" id="phone" name="phone" value="<?php echo getRow($user)['Phone']; ?>">
+					<label class="inputLab1">Address</label>
+					<input type="text" id="address" name="address" value="<?php echo getRow($user)['Address']; ?>">
+				</div>
+				<div align="center">
+					<input id="btn1" type="button" name="submit" value="Save" onclick="return !!(notSetEmpty() && uniqueEmail());">
+				</div>
 		</form>
 	</body>
 </html>

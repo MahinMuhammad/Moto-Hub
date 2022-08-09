@@ -8,44 +8,67 @@
 	require_once "../model/userModel.php";
 
 ?>
-<html>
+<!-- <html>
 	<head>
 		<title>Home Page</title>
+		<style>
+			body 
+			{
+			  background-image: url('../asset/backG.jpg');
+			  background-size: cover;
+			}
+		</style>
 	</head>
-	<style>
-		body 
-		{
-		  background-image: url('../asset/backG.jpg');
-		  background-size: cover;
-		}
-	</style>
 	<body>
 		<fieldset align="center">
 			<table  width="100%">
 				<tr>
 					<td width="250"></td>
 					<td align="center" width="200"><a href="cusProfile.php"> Profile </a></td>
-					<!-- <td align="center" width="200"><a href="inbox.php"> Inbox </a></td>  -->
-					<!-- <td align="center" width="200"><a href="services.php"> Services </a></td> --> 			
+					<td align="center" width="200"><a href="cusInbox.php"> Inbox </a></td> 
+					<td align="center" width="200"><a href="services.php"> Services </a></td> 			
 					<td align="center" width="200"><a href="cusChangePass.php"> Change Password </a></td>
-					<!-- <td align="center" width="200"><a href="cart.php"> Cart </a></td> -->
+					<td align="center" width="200"><a href="cart.php"> Cart </a></td>
 					<td align="center" width="200"><a href="../control/logout.php"> Logout </a></td>
 					<td width="250"></td>
 				</tr>
 			</table>
 			<h1>Welcome <?php echo getRow($user)['Name']; ?>!</h1>
-			<!-- <table border="1" align="center">
-				<tr>
-					<td align="center" colspan="2"> MARKET PLACE</td>
-				</tr>
-				<tr>
-					<td align="center" colspan="2"><a href="productView.php"> <?php echo trim($product[1]); ?> </a></td>
-				</tr>
-				<tr>
-					<td align="center"><a href="profileCus.php"> Prev </a></td>
-					<td align="center"><a href="profileCus.php"> Next </a></td>
-				</tr>
-			</table> -->
 		</fieldset>
 	</body>
+</html> -->
+
+<html>
+
+	<head>
+	    <title>Home</title>
+	    <link rel="stylesheet" href="../asset/sideBar.css">
+	</head>
+
+	<body>
+		<font face="Verdana">
+		    <aside>
+		        <p> Nevigation </p>
+		        <a href="customerHome.php">
+		          Home
+		        </a>
+		        <a href="cusProfile.php">
+		          Profile
+		        </a>
+		        <a href="services.php">
+		          Service
+		        </a>
+		        <a href="cusInbox.php">
+		          Inbox
+		        </a>
+		        <a href="cart.php">
+		          Cart
+		        </a>
+		        <a href="../control/logout.php">
+		          LogOut
+		        </a>
+		      </aside>
+	  	</font>
+	</body>
+
 </html>

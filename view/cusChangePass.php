@@ -9,40 +9,22 @@
 	<head>
 		<title>username</title>
 		<script src="../asset/cusCngPassVal.js"></script>
+		<link rel="stylesheet" type="text/css" href="../asset/cusCngPassDes.css">
 	</head>
-	<style>
-		body 
-		{
-		  background-image: url('../asset/backG.jpg');
-		  background-size: cover;
-		}
-	</style>
 	<body>
 		<form method="post" action="">
-			<fieldset align="center">
-				<legend>CHANGE PASSWORD</legend>
-				<table align="center">
-					<tr>
-						<td>Current Password</td>
-						<td><input type="password" id="password" name="password" value=""><br></td>
-					</tr>
-					<tr>
-						<td>New Password</td>
-						<td><input type="password" id="passwordNew" name="passwordNew" value=""><br></td>
-					</tr>
-					<tr>
-						<td>Confirm Password</td>
-						<td><input type="password" id="passwordConf" name="passwordConf" value=""><br></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>
-							<input type="submit" name="submit" value="Confirm" onclick="return !!(notEmpty() && cngPass());">
-							<a href="customerHome.php"> Go Back </a>
-						</td>
-					</tr>
-				</table>						 
-			</fieldset>
+			<div id="passTitle1">Change Pass</div>
+			<div align="center" class="inputInfo">
+				<label>Current Password</label>
+				<div><input type="password" id="password" name="password" value=""></div>
+				<label>New Password</label>
+				<div><input type="password" id="passwordNew" name="passwordNew" value=""></div>
+				<label>Confirm Password</label>
+				<div><input type="password" id="passwordConf" name="passwordConf" value=""></div>
+				</div>
+			<div>
+				<input id="btn" type="button" name="submit" value="Confirm" onclick="return !!(notEmpty() && cngPass());">
+			</div>
 		</form>
 	</body>
 </html>

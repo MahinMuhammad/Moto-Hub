@@ -1,0 +1,61 @@
+#delTitle1{
+	background-color: white;
+	border-top-right-radius: 80px;
+  	border-bottom-right-radius: 80px;
+  	border-top-left-radius: 80px;
+  	border-bottom-left-radius: 80px;
+  	width: 120px;
+  	height: 25px;
+  	color: #778ff3;
+  	font-weight: bold;
+  	padding-left: 28px;
+  	padding-top: 6px;
+  	margin-left: 38px;
+  	margin-bottom: 15px;
+  	font-style: oblique;
+  	box-shadow: 4px 4px 7px #cbced1, -4px -4px 7px white;
+}
+
+.inputInfo{
+	text-align: left;
+}
+
+label, input, button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+label{
+	margin-bottom: 4px;
+	font-size: 12px;
+	margin-top: 12px;
+}
+
+input{
+	background: #ecf0f3;
+	padding: 10px;
+	padding-left: 20px;
+	height: 40px;
+	font-size: 14px;
+	border-radius: 50px;
+	box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+#btn{
+	color: white;
+	margin-top: 20px;
+	background: #778ff3;
+	height: 40px;
+	border-radius: 20px;
+	cursor: pointer;
+	font-weight: 900;
+	box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+}
+
+
+
+

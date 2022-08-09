@@ -46,3 +46,13 @@ function cngPass()
         }
     }
 }
+
+function loadCngPass()
+{
+	fetch("../view/cusChangePass.php")
+	.then((result) => { return result.text(); })
+	.then((content) => { document.getElementById("box1").innerHTML = content; });
+}
+
+
+

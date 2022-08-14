@@ -59,7 +59,7 @@
 		          Service
 		        </a>
 		        <a href="cusInbox.php">
-		          Inbox
+		          Mail Box
 		        </a>
 		        <a href="cart.php">
 		          Cart

@@ -15,6 +15,7 @@
     <script src="../asset/cusSetVal.js"></script>
     <script src="../asset/cusCngPassVal.js"></script>
     <script src="../asset/cusDelAccVal.js"></script>
+    <script src="../asset/cusCngPicVal.js"></script>
 </head>
 
     <body>
@@ -40,7 +41,8 @@
                       PROFILE
                   </div>
                   <hr>
-                  <div id="propic">
+                  <div id="propic" onclick="cleanBox(); loadSelectPic(); editWindowOpen();">
+                      <img src="data:image/png;base64,<?php echo getRow($user)['propic']; ?>"/>
                       
                   </div>
                   <div id="divider1"></div>

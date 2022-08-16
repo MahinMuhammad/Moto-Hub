@@ -84,6 +84,18 @@
             return true;
         }
     }
+
+    function setProPic($user, $encoded){
+        $conn = getConnection();
+        $sql = "update userTab set propic='$encoded' where Email='{$user['email']}'";
+        mysqli_query($conn, $sql);
+        if(mysqli_affected_rows($conn))
+        {
+            return true;
+        }else{
+            return false;
+        }
+    }
 ?>
 
 

@@ -1,12 +1,20 @@
 <?php 
-	$user['email'] = $_POST['email'];
-	$user['pass'] = $_POST['password'];
+	// $user['email'] = $_POST['email'];
+	// $user['pass'] = $_POST['password'];
+
+	$json =$_POST['data'];
+	$userObj = json_decode($json);
+	$user['email'] = $userObj->email;
+	$user['pass'] = $userObj->pass;
+
+	ini_set('display_errors', 1);
+	error_reporting(E_ALL|E_STRICT);
 
 	require_once "../model/userModel.php";
 
 	if(login($user))
 	{
-		setcookie('status', $user['email'], time()+3600, '/');
+		setcookie('status', $userObj->email, time()+3600, '/');
 		
 		switch (getRow($user)['UserType']) 
 		{

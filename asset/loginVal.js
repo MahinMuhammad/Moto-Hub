@@ -18,10 +18,14 @@ function login()
 {
 	let email = document.getElementById('email').value;
 	let pass = document.getElementById('password').value; 
+	let user = {'email': email, 'pass':pass};
+    let json = JSON.stringify(user);
+
 	let xhttp = new XMLHttpRequest();
 	xhttp.open('POST', '../control/loginCheck.php', true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xhttp.send('email='+email+'&password='+pass);
+	xhttp.send('data='+json);
+
 	xhttp.onreadystatechange = function ()
 	{
         if(this.readyState == 4 && this.status == 200)

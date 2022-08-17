@@ -96,6 +96,16 @@
             return false;
         }
     }
+
+    function sendMsg($msg){
+        $conn = getConnection();
+        $sql = "insert into msgTab values(DEFAULT, '{$msg['content']}', '{$msg['email']}', '{$msg['rec_email']}')";
+        if(mysqli_query($conn, $sql)){
+            return true;
+        }else{
+            return false;
+        }
+    }
 ?>
 
 

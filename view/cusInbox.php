@@ -16,6 +16,7 @@
       <link rel="stylesheet" href="../asset/sideBar.css">
       <link rel="stylesheet" type="text/css" href="../asset/cusInboxDes.css">
       <script src="../asset/cusInbox.js"></script>
+      <script src="../asset/cusSendMsgVal.js"></script>
   </head>
 
   <body>
@@ -45,7 +46,7 @@
               <div id="msgBodyBox">
                 <div id="msgForm">
                   <div onclick="hideMsgForm()" id="cnclBtn">X</div>
-            
+                  <div id="msgFormInside"></div>
                 </div>
                 
               </div>

@@ -97,7 +97,10 @@ aside,
   box-shadow: 4px 4px 4px #cbced1, -4px -4px 4px white;
 }
 
-
+#msgFormInside{
+  height: 325px;
+  box-sizing: border-box;
+}
 
 
 

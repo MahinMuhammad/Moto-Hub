@@ -29,6 +29,8 @@
     box-shadow:  6px 6px 6px #cbced1,  -6px -6px 6px white;
 }
 
+
+
 #Browse1{
 	height: 150px;
 	background-color: #eeeeee;
@@ -71,3 +73,9 @@ input[type="file"]{
 	outline: none;
 	box-sizing: border-box;
 }
+
+
+
+
+
+

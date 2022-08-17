@@ -16,7 +16,7 @@
 			<div id="pictitle1">Profile Pic</div>
 			<div id="BrowseBox1">
 				<label id="Browse1" >
-				<input id="file" type="file" name="myfile" onchange="showSelectedPic(event)">
+				<input id="file" type="file" accept="image/*" name="myfile" onchange="showSelectedPic(event)">
 				Browse
 				</label>
 				<div>
@@ -24,7 +24,6 @@
 				</div>
 			</div>
 			<input id="picButton1" type="submit" name="Submit" value="Save">
-			
 		</form>
 	</body>
 </html>

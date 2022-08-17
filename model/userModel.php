@@ -17,7 +17,7 @@
 
     function reg($user){
         $conn = getConnection();
-		$sql = "insert into userTab values('{$user['username']}', '{$user['email']}', '{$user['pass']}', '{$user['userType']}', '{$user['dob']}', '{$user['gender']}', '{$user['address']}', '{$user['phone']}')";
+		$sql = "insert into userTab values('{$user['username']}', '{$user['email']}', '{$user['pass']}', '{$user['userType']}', '{$user['dob']}', '{$user['gender']}', '{$user['address']}', '{$user['phone']}', DEFAULT)";
         if(mysqli_query($conn, $sql)){
             return true;
         }else{

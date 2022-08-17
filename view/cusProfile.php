@@ -42,7 +42,7 @@
                   </div>
                   <hr>
                   <div id="propic" onclick="cleanBox(); loadSelectPic(); editWindowOpen();">
-                      <img src="data:image/png;base64,<?php echo getRow($user)['propic']; ?>"/>
+                      <img src="data:image/png;base64,<?php echo getRow($user)['propic']; ?>" onerror='this.style.display = "none"' />
                       
                   </div>
                   <div id="divider1"></div>

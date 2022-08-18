@@ -1,4 +1,10 @@
 <?php
+	
+	if(!isset($_COOKIE['status']))
+    {
+        header('location: ../view/login.html');
+    }
+
     $json =$_POST['data'];
 	$msgObj = json_decode($json);
 

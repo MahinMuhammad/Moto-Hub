@@ -24,12 +24,31 @@ aside,
 
 #msgTitle, #msgBody{
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
+}
+
+#windowTitle{
+  background-color: #778ff3;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  width: fit-content;
+  height: 25px;
+  color: white;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  margin-left: 57px;
+  margin-bottom: 20px;
+  font-style: oblique;
+  box-shadow: 4px 4px 7px #cbced1, -4px -4px 7px white;
 }
 
 #msgTitle{
   background: #9AA4EC;
-  height: 680px;
+  height: 630px;
   width: 200px;
   border-radius: 20px;
   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
@@ -45,6 +64,7 @@ aside,
   box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
   padding: 1px;
   box-sizing: border-box;
+  margin-top: -45px;
   margin-left: 30px;
 }
 
@@ -52,7 +72,7 @@ aside,
   background: #ecf0f3;
   padding: 10px;
   padding-left: 20px;
-  height: 658px;
+  height: 608px;
   font-size: 14px;
   border-radius: 20px;
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
@@ -79,7 +99,7 @@ aside,
   box-shadow:  6px 6px 6px #cbced1, -6px -6px 6px white;
   padding: 15px;
   box-sizing: border-box;
-  visibility: hidden;
+  display: none;
 }
 
 #cnclBtn{
@@ -101,6 +121,51 @@ aside,
   height: 325px;
   box-sizing: border-box;
 }
+
+.msgHeadings1{
+  height: fit-content;
+  width: fit-content;
+  background-color: #eeeeee;
+  margin-top: 15px;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  box-shadow:  6px 6px 6px #cbced1,  -6px -6px 6px white;
+}
+
+#displayMsg{
+  background-color: #eeeeee;
+  margin: 40px;
+  height: 535px;
+  width: 615px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  box-shadow:  6px 6px 6px #cbced1,  -6px -6px 6px white;
+  padding: 20px;
+}
+
+#rec_email, #time1{
+  display: inline-block;
+  vertical-align: top;
+}
+
+#time1{
+  float: right;
+}
+#seperatorLine1{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: #778ff3;
+  height: 1px;
+  box-shadow:  3px 3px 3px #cbced1,  -3px -3px 3px white;
+}
+
+
+
+
+
+
 
 
 

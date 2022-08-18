@@ -106,6 +106,52 @@
             return false;
         }
     }
+
+    function sentMsgBox($user){
+        $conn = getConnection();
+        $sql = "select * from msgTab where Email='{$user['email']}'";
+        $result = mysqli_query($conn, $sql);
+        $list = [];
+        $i = 0;
+        while ($value = mysqli_fetch_assoc($result)) 
+        {
+            $list[$i] = $value;
+            $i++;
+        }
+        
+        return $list;
+    }
+
+    function getMsgRow($msg){
+        $conn = getConnection();
+        $sql = "select * from msgTab where Email='{$msg['email']}' and msg_id='{$msg['msg_id ']}'";
+        $result = mysqli_query($conn, $sql);
+        $value = mysqli_fetch_assoc($result);
+        return $value;
+    }
+
+    function inMsgBox($user){
+        $conn = getConnection();
+        $sql = "select * from msgTab where rec_email='{$user['rec_email']}'";
+        $result = mysqli_query($conn, $sql);
+        $list = [];
+        $i = 0;
+        while ($value = mysqli_fetch_assoc($result)) 
+        {
+            $list[$i] = $value;
+            $i++;
+        }
+        
+        return $list;
+    }
+
+    function getInboxMsgRow($msg){
+        $conn = getConnection();
+        $sql = "select * from msgTab where rec_email='{$msg['rec_email']}' and msg_id='{$msg['msg_id ']}'";
+        $result = mysqli_query($conn, $sql);
+        $value = mysqli_fetch_assoc($result);
+        return $value;
+    }
 ?>
 
 

@@ -26,10 +26,10 @@
             <a href="javascript:void(0)" onclick="loadMsgForm()">
               Create
             </a>
-            <a href="javascript:void(0)">
+            <a href="javascript:void(0)" onclick="loadInbox()">
               Inbox
             </a>
-            <a href="javascript:void(0)">
+            <a href="javascript:void(0)" onclick="loadSent()">
               Sent
             </a>
             <a href="customerHome.php">
@@ -37,6 +37,7 @@
             </a>
           </aside>
           <div id="msgBox">
+            <div id="windowTitle">Inbox</div>
             <div id="msgTitle">
               <div id="msgTitleBox">
                 
@@ -48,7 +49,9 @@
                   <div onclick="hideMsgForm()" id="cnclBtn">X</div>
                   <div id="msgFormInside"></div>
                 </div>
-                
+                <div id="content1">
+                  
+                </div>
               </div>
             </div>
           </div>

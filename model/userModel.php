@@ -152,6 +152,29 @@
         $value = mysqli_fetch_assoc($result);
         return $value;
     }
+
+    function showProducts(){
+        $conn = getConnection();
+        $sql = "select * from prodTab";
+        $result = mysqli_query($conn, $sql);
+        $list = [];
+        $i = 0;
+        while ($value = mysqli_fetch_assoc($result)) 
+        {
+            $list[$i] = $value;
+            $i++;
+        }
+        
+        return $list;
+    }
+
+    function getProdRow($Product_Id){
+        $conn = getConnection();
+        $sql = "select * from prodTab where Product_Id='{$Product_Id}'";
+        $result = mysqli_query($conn, $sql);
+        $value = mysqli_fetch_assoc($result);
+        return $value;
+    }
 ?>
 
 

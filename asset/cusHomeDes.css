@@ -1,0 +1,124 @@
+aside, #home{
+	display: inline-block;
+	vertical-align: top;
+}
+
+#home{
+	background: #e7effc;
+  width: 1060px;
+  height: 720px;
+  margin-left: 50px;
+  margin-top: 50px;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#homeBorder{
+  background: #9AA4EC;
+  height: 680px;
+  width: 1020px;
+  border-radius: 20px;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+#homeBody{
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 658px;
+  width: 988px;
+  font-size: 14px;
+  border-radius: 20px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  overflow-y: auto;
+}
+
+.prodBox{
+  margin-left: 10px;
+  margin-top: 20px;
+  background-color: #e7effc;
+  height: 150px;
+  width: 940px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  cursor: pointer;
+  /*border: 1px solid #ccc;*/
+}
+
+img{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 150px;
+  width: 200px;
+}
+
+.prodpic, #prodInfo{
+  display: inline-block;
+  vertical-align: top;
+}
+#prodInfo{
+  margin-top: 10px;
+  margin-left: 10px;
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 110px;
+  width: 640px;
+  font-size: 14px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  font-size: 16px;
+}
+
+.prodName, .prodCondition{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.prodName{
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.prodCondition{
+  margin-top: 2px;
+  font-size: 13px;
+}
+
+.prodBrand, .sellerEmail{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#sepLine{
+  width: 1px;
+  height: 30px;
+  background-color: black;
+}
+
+.postTime{
+  color: gray;
+  float: right;
+  font-size: 13px;
+  font-style: oblique;
+}
+
+.prodYear{
+  margin-bottom: 5px;
+}
+
+.prodBrand{
+  margin-bottom: 5px;
+}
+
+.sellerEmail{
+  margin-bottom: 5px;
+}
+
+
+

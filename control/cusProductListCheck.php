@@ -14,30 +14,30 @@
 		{	$oko = base64_encode($list[$i]['prodpic']);
 			$jsonArray[$i] = 
 			"<div class='prodBox' id='{$list[$i]['Product_Id']}' onclick='showproductDetails(this.id)'>
-				<div class='prodpic'>
+				<div id='prodpic'>
 					<img src='data:image/png;base64,{$oko}' />
 				</div>
 				<div id='prodInfo'>
-					<div class='prodName'>
+					<div id='prodName'>
 						{$list[$i]['Name']}
 					</div>
-					<div class='prodCondition'>
+					<div id='prodCondition'>
 						({$list[$i]['new_used']})
 					</div>
-					<div class='prodYear'>
+					<div id='prodYear'>
 						Model Year: {$list[$i]['model_Year']}
 					</div>
 
-					<div class='prodBrand'>
+					<div id='prodBrand'>
 						Company: {$list[$i]['Brand_Name']}
 					</div>
-					<div class='prodPrice'>
+					<div id='prodPrice'>
 						Price: {$list[$i]['Price']}
 					</div>
-					<div class='sellerEmail'>
+					<div id='sellerEmail'>
 						Seller: {$list[$i]['Email']}
 					</div>
-					<div class='postTime'>
+					<div id='postTime'>
 						Posted at {$list[$i]['Product_Id']}
 					</div>
 				</div>

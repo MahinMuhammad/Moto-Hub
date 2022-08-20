@@ -56,7 +56,7 @@ img{
   width: 200px;
 }
 
-.prodpic, #prodInfo{
+#prodpic, #prodInfo{
   display: inline-block;
   vertical-align: top;
 }
@@ -75,50 +75,210 @@ img{
   font-size: 16px;
 }
 
-.prodName, .prodCondition{
+#prodName, #prodCondition{
   display: inline-block;
   vertical-align: top;
 }
 
-.prodName{
+#prodName{
   font-weight: bold;
-  margin-bottom: 5px;
+  font-size: 20px;
 }
 
-.prodCondition{
-  margin-top: 2px;
+#prodCondition{
+  margin-top: 5px;
   font-size: 13px;
 }
 
-.prodBrand, .sellerEmail{
+#prodBrand, #sellerEmail{
   display: inline-block;
   vertical-align: middle;
 }
 
-#sepLine{
-  width: 1px;
-  height: 30px;
-  background-color: black;
-}
-
-.postTime{
+#postTime{
   color: gray;
   float: right;
   font-size: 13px;
   font-style: oblique;
 }
 
-.prodYear{
+#prodYear{
+  margin-top: 10px;
+}
+
+#prodBrand{
+  margin-top: 3px;
+}
+
+#prodTypeprodType{
+  margin-top: 3px;
+}
+
+#sellerEmail{
   margin-bottom: 5px;
 }
 
-.prodBrand{
-  margin-bottom: 5px;
+.prodDisplay{
+  margin-left: 10px;
+  margin-top: 20px;
+  background-color: #e7effc;
+  height: 400px;
+  width: 940px;
+  border-radius: 20px;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  /*border: 1px solid #ccc;*/
 }
 
-.sellerEmail{
-  margin-bottom: 5px;
+#prodpicBig img{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 400px;
+  width: 500px;
 }
+
+#prodpicBig, #prodInfoDisplay, #closeDisplayBtn{
+  display: inline-block;
+  vertical-align: top;
+}
+
+#prodInfoDisplay{
+  margin-top: 10px;
+  margin-left: 10px;
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 360px;
+  width: 330px;
+  font-size: 14px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  font-size: 16px;
+  overflow-y: auto;
+}
+
+#prodDescription{
+  margin-top: 10px;
+}
+
+#postTimeDisplay{
+  margin-top: 10px;
+  color: gray;
+  font-size: 13px;
+  font-style: oblique;
+}
+
+#closeDisplayBtn{
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #778ff3;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 4px #cbced1, -4px -4px 4px white;
+  padding-left: 7px;
+  padding-top: 4px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#commentBox{
+  margin-top: 40px;
+  background-color: #e7effc;
+  height: 170px;
+  width: 940px;
+  border-radius: 20px;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+#commentInput{
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  padding-left: 30px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  width: 790px;
+}
+
+#commentBtn{
+  color: white;
+  background: #778ff3;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  width: 120px;
+  font-size: 16px;
+}
+#commentDisplay{
+  margin-top: 10px;
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 100px;
+  font-size: 14px;
+  border-radius: 20px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  padding-left: 30px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  width: 920px;
+  overflow-y: auto;
+}
+
+#hiddenID{
+  display: none;
+}
+
+#commenter, #comDivider, #comContent{
+  display: inline-block;
+  vertical-align: top;
+}
+
+#comDivider{
+  margin-top: -5px;
+  font-size: 19px;
+  color: gray;
+}
+
+#commenter{
+  font-style: oblique;
+}
+
+.singleComBox{
+  height: 30px;
+  width: fit-content;
+  background-color: #eeeeee;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow:  6px 6px 6px #cbced1,  -6px -6px 6px white;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
 
 
 

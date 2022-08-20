@@ -175,6 +175,32 @@
         $value = mysqli_fetch_assoc($result);
         return $value;
     }
+
+    function saveComment($com)
+    {
+        $conn = getConnection();
+        $sql = "insert into revTab values(DEFAULT, '{$com['comment']}', '{$com['email']}', '{$com['Product_Id']}')";
+        if(mysqli_query($conn, $sql)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    function showCommentList($Product_Id){
+        $conn = getConnection();
+        $sql = "select * from revTab where Product_Id='{$Product_Id}'";
+        $result = mysqli_query($conn, $sql);
+        $list = [];
+        $i = 0;
+        while ($value = mysqli_fetch_assoc($result)) 
+        {
+            $list[$i] = $value;
+            $i++;
+        }
+        
+        return $list;
+    }
 ?>
 
 

@@ -19,7 +19,7 @@
       <script src="../asset/cusSendMsgVal.js"></script>
   </head>
 
-  <body>
+  <body onload="loadInbox()">
     <font face="Verdana">
         <aside>
             <p> Nevigation </p>
@@ -46,7 +46,7 @@
             <div id="msgBody">
               <div id="msgBodyBox">
                 <div id="msgForm">
-                  <div onclick="hideMsgForm()" id="cnclBtn">X</div>
+                  <div onclick="hideMsgForm(); loadInbox()" id="cnclBtn">X</div>
                   <div id="msgFormInside"></div>
                 </div>
                 <div id="content1">

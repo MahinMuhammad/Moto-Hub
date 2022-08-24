@@ -28,14 +28,17 @@
 		        <a href="cusProfile.php">
 		          Profile
 		        </a>
-		        <a href="services.php">
+		        <a href="cusServices.php">
 		          Service
 		        </a>
 		        <a href="cusInbox.php">
 		          Mail Box
 		        </a>
-		        <a href="cart.php">
+		        <a href="cusCart.php">
 		          Cart
+		        </a>
+		        <a onclick="contactAdminForm()">
+		          Contact Admin
 		        </a>
 		        <a href="../control/logout.php">
 		          LogOut

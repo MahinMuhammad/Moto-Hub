@@ -24,6 +24,7 @@
 					</div>
 					<div id='prodYear'>
 						Model Year: {$value['model_Year']}
+						<input id='reportBtn' type='button' value='Report' onclick='prodNotReported()'>
 					</div>
 					<div id='prodBrand'>
 						Company: {$value['Brand_Name']}
@@ -40,18 +41,20 @@
 					<div id='sellerEmail'>
 						Seller: {$value['Email']}
 					</div>
+					<hr>
 					<div id='prodDescription'>
 						{$value['Description']}
 					</div>
 					<div id='postTimeDisplay'>
 						Posted at {$value['Product_Id']}
+						<input id='buyButton' type='button' value='Buy' onclick='notInCart()'>
 					</div>
 				</div>
 				<div id='closeDisplayBtn' onclick='closeProductDetails()'>X</div>
 
 			</div>
 			<div id='commentBox'>
-				<div> <input type='text' id='commentInput'> <input type='button' id='commentBtn' value='Comment' onclick='return !!(commentNotEmpty() && saveComment());'> </div>
+				<div> <input type='text' id='commentInput' placeholder='Write comment here..'> <input type='button' id='commentBtn' value='Comment' onclick='return !!(commentNotEmpty() && saveComment());'> </div>
 				<div id='hiddenID'>{$value['Product_Id']}</div>
 				<div id='commentDisplay'></div>
 			</div>";

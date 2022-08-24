@@ -35,7 +35,7 @@
 
     function updateRow($user){
         $conn = getConnection();
-        $sql = "update userTab set Name='{$user['name']}', Email='{$user['emailNew']}' where Email='{$user['email']}'";
+        $sql = "update userTab set Name='{$user['name']}', Email='{$user['emailNew']}', DOB='{$user['dob']}', Address='{$user['address']}', Phone='{$user['phone']}', Gender='{$user['gender']}' where Email='{$user['email']}'";
         mysqli_query($conn, $sql);
         if(mysqli_affected_rows($conn))
         {
@@ -200,6 +200,128 @@
         }
         
         return $list;
+    }
+
+    function searchProdInCart($Product){
+        $conn = getConnection();
+        $sql = "select * from cartTab where Email='{$Product['email']}' and Product_Id='{$Product['Product_Id']}'";
+        $result = mysqli_query($conn, $sql);
+        $count = mysqli_num_rows($result);
+
+        if($count >0)
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+    }
+
+    function putProdInCart($Product){
+        $conn = getConnection();
+        $sql = "insert into cartTab values(DEFAULT, '{$Product['email']}', '{$Product['Product_Id']}')";
+        if(mysqli_query($conn, $sql)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    function searchProdReport($msg){
+        $conn = getConnection();
+        $sql = "select * from msgTab where Email='{$msg['email']}' and rec_email='{$msg['rec_email']}' and content='{$msg['content']}'";
+        $result = mysqli_query($conn, $sql);
+        $count = mysqli_num_rows($result);
+
+        if($count >0)
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+    }
+
+    function showProductsInCart($user){
+        $conn = getConnection();
+        $sql = "select * from cartTab where Email='{$user['email']}'";
+        $result = mysqli_query($conn, $sql);
+        $list = [];
+        $i = 0;
+        while ($value = mysqli_fetch_assoc($result)) 
+        {
+            $list[$i] = $value;
+            $i++;
+        }
+        
+        return $list;
+    }
+
+    function deleteProdFromCart($prod){
+        $conn = getConnection();
+        $sql = "delete from cartTab where Email='{$prod['email']}' and Product_Id='{$prod['Product_Id']}'";
+        mysqli_query($conn, $sql);
+        if(mysqli_affected_rows($conn))
+        {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    function chekoutCart($prod){
+        $conn = getConnection();
+        $sql = "insert into payTab values(DEFAULT, '{$prod['amount']}', '{$prod['email']}', '{$prod['rec_email']}', '{$prod['Product_Id']}')";
+        if(mysqli_query($conn, $sql)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    function checkPayTabForHistory($user){
+        $conn = getConnection();
+        $sql = "select * from payTab where Email='{$user['email']}'";
+        $result = mysqli_query($conn, $sql);
+        $list = [];
+        $i = 0;
+        while ($value = mysqli_fetch_assoc($result)) 
+        {
+            $list[$i] = $value;
+            $i++;
+        }
+        
+        return $list;
+    }
+
+    function showServices(){
+        $conn = getConnection();
+        $sql = "select * from servTab";
+        $result = mysqli_query($conn, $sql);
+        $list = [];
+        $i = 0;
+        while ($value = mysqli_fetch_assoc($result)) 
+        {
+            $list[$i] = $value;
+            $i++;
+        }
+        
+        return $list;
+    }
+
+    function searchServiceInDB($Service){
+        $conn = getConnection();
+        $sql = "select * from servTab where Email='{$Service['email']}' and service_id='{$Service['service_id']}'";
+        $result = mysqli_query($conn, $sql);
+        $count = mysqli_num_rows($result);
+
+        if($count >0)
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
     }
 ?>
 

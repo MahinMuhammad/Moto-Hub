@@ -76,6 +76,7 @@ aside,
   font-size: 14px;
   border-radius: 20px;
   box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+  overflow-y: auto;
 }
 
 #msgBodyBox{
@@ -159,6 +160,11 @@ aside,
   background: #778ff3;
   height: 1px;
   box-shadow:  3px 3px 3px #cbced1,  -3px -3px 3px white;
+}
+
+#msgContentBody{
+  overflow-y: auto;
+  height: 480px;
 }
 
 

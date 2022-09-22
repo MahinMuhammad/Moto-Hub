@@ -9,7 +9,7 @@ It can also be used to provide and receive services related to vehicles such as 
 <ul>* Clone the repository inside htdocs</ul>
 <ul>* Create a Database in Mysql named MotoHub</ul>
 <ul>* Import the MotoHub.sql from DatabaseSql folder</ul>
-<ul>* Register with only Customer type (only customer type is ready till now)</ul>
-<ul>* Log in with email pass you have used to register</ul>
+<ul>* Register with Customer type (only customer type is ready till now)</ul>
+<ul>* Log in with email and password you have used to register</ul>
 
 <h2>Development on progress..</h2>
